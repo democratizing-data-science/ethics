@@ -1,5 +1,5 @@
 library(igraph)
-a<-read.csv("C:/Users/msgc/Dropbox (Penn GSE)/Blessing PHUDCFILY/Courses_PHUDCFILY/SSNA_PHUDCFILY/Ethics Networks/New Readings PHUDCFILY/consent_Phudcfily.csv")
+a<-read.csv("https://raw.githubusercontent.com/democratizing-data-science/ethics/main/consent.csv")
 g <- graph.data.frame(a)
 V(g)$color <- V(g)$name %in% a[,1]
 V(g)$size <- (betweenness(g, directed=F)/max( betweenness(g, directed=F)))*40
